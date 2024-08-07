@@ -1,0 +1,67 @@
+  <div class="container">
+    <nav>
+      <a href="#" class="logo"><span>R</span>esto</a>
+      <ul class="nav">
+        <li><a href="acceuil.component.html">Acceuil</a></li>
+        <li><a href="apropos.component.html">A propos</a></li>
+        <li><a href="menu.component.html">Menu</a></li>
+        <li><a href="contact.component.html">Contact</a></li>
+        <li>
+          <button class="btn menutoggle" id="display" (click)="reservation()">Réservation</button>
+        </li>
+      </ul>
+    </nav>
+    <section class="section">
+      <div class="sec-contain">
+        <div class="form-wrapper">
+          <div class="card">
+            <div class="card-header">
+              <div id="forLogin" class="form-header active" (click)="showLoginForm()">S'inscrire</div>
+              <div id="forRegister" class="form-header" (click)="showRegisterForm()">Réserver</div>
+            </div>
+            <div class="card-body" id="formContainer">
+              <form id="loginForm" class="toggleForm" *ngIf="true">
+                <input type="text" class="form-control" placeholder="Utilisateur">
+                <input type="password" class="form-control" placeholder="Mot de passe">
+                <button class="formButton" (click)="login()">Connexion</button>
+              </form>
+              <form id="registerForm" *ngIf="registerFormVisible">
+                <input type="text" class="form-control" placeholder="Utilisateur">
+                <input type="password" class="form-control" placeholder="Mot de passe">
+                <input type="password" class="form-control" placeholder="Confirmer mot de passe">
+                <button class="formButton" (click)="register()">Réservation</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--
+    <section class="section">
+      <div class="sec-contain">
+        <div class="form-wrapper">
+          <div class="card">
+            <div class="card-header">
+              <div id="forLogin" class="form-header active" (click)="showLoginForm()">S'inscrire</div>
+              <div id="forRegister" class="form-header" (click)="showRegisterForm()">Réserver</div>
+            </div>
+            <div class="card-body" id="formContainer">
+              <form id="loginForm" class="toggleForm" *ngIf="true">
+                <input type="text" class="form-control" placeholder="Utilisateur">
+                <input type="password" class="form-control" placeholder="Mot de passe">
+                <button class="formButton" (click)="login()">Connexion</button>
+              </form>
+
+              <form id="registerForm" *ngIf="registerFormVisible">
+                <input type="text" class="form-control" placeholder="Utilisateur">
+                <input type="password" class="form-control" placeholder="Mot de passe">
+                <input type="password" class="form-control" placeholder="Confirmer mot de passe">
+                <button class="formButton" (click)="register()">Réservation</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+  </div>

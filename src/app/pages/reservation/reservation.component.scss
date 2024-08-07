@@ -1,0 +1,156 @@
+$primary-color: #ff0000;
+$secondary-color: #0000ff;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: $primary-color;
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-left: 20px;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.btn {
+  background-color: $secondary-color;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+.sec-contain {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.form-header {
+  font-weight: bold;
+  cursor: pointer;
+
+  &.active {
+    color: $secondary-color;
+  }
+}
+
+.card-body {
+  padding: 20px;
+
+  #formContainer {
+    transition: transform 0.5s;
+  }
+
+  form {
+    &.toggleForm {
+      display: none;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #eaeaea;
+      border-radius: 4px;
+    }
+
+    .formButton {
+      background-color: $secondary-color;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+
+    ul {
+      margin-top: 20px;
+      flex-direction: column;
+      text-align: center;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+}
